@@ -9,6 +9,7 @@
 7. Future features
 8. My thoughts...
 
+
 ## Tasks
 
 (ref: Tech Trainee Coding Challenge BikEEE.pdf)
@@ -24,6 +25,7 @@ Now we want to bring the next big feature to the marketplace, an overview of the
 4. We would love to hear your feedback about this challenge - it would be very helpful if you leave some comments in the readme!
 
 5. After a maximum of seven days (the exact hour does not matter), hand in all your files and a readme with some instructions how to run your code in a single ZIP package.
+
 
 ## How to run this code in browser
 
@@ -43,9 +45,11 @@ node index.js
 
 and open http://localhost:8000/ in your blowser.
 
+
 ## Technology used
 
 HTML, CSS, Bootstrap, JavaScript, Node.js, Express
+
 
 ## Points
 
@@ -55,9 +59,11 @@ First I created an array only with counters and compared but couldn't find out w
 
 Also, when I write this Readme, I noticed that I need to write the instructions how to run which I have never really had in my mind before when I work a project on my own. To do this, I added a index.js for Node.js, this was also hard for me.
 
+
 ## For tests
 
 I am not really familier with JavaScript unit testing so far, I did testing manually with checking on my browser with VScode 'Live Server' extention which run the server automatically every time I save the data.
+
 
 ## Problem & Improvement
 
@@ -70,10 +76,13 @@ Also there is quite empty in the page. In short, I will add and implement:
 - Testimonials
 - More designs & make responsible
 
+
 ## My thoughts...
 
 Why I chose JavaScript for this project because I have leaned JavaScript longer than any other programming languages and thought I could do my best with JavaScript.
 
 And the reason why I like JavaScript is that there's many possibility, front-end and back-end, many frameworks, evolving and fun!! I feel that front-end is more interesting at this moment but I would like to learn a lot more about server side in the future as well.
 
-This assignment was really challenging for me but I learned new things a lot and had so much fun. Thank you very much!
+This assignment was really challenging for me but I learned new things a lot and had so much fun. Hope I will get a fun and nice assignment like this again! :)
+
+Thank you very much! 
