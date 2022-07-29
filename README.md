@@ -43,7 +43,7 @@ npm install express
 node index.js
 ```
 
-and open http://localhost:8000/ in your blowser.
+and open http://localhost:8000/ in your browser.
 
 
 ## Technology used
@@ -53,22 +53,22 @@ HTML, CSS, Bootstrap, JavaScript, Node.js, Express
 
 ## Points
 
-The hardest point to implement was the part of creating counterArray(from line 133, app.js), push modelnames with counter to counterArray and then sort biggest to smallest counter numbers.
+The hardest point to implement was the part of creating counterArray(from line 133, app.js), push modelNames with counter to counterArray and then sort biggest to smallest counter numbers.
 
-First I created an array only with counters and compared but couldn't find out what each model names were. I googled for long time and solved wtih creating an array of an ofject like {model: -- , counter: -- }. I wwould like to try to find simpler and easier approach to do this process.
+First I created an array only with counters and compared but couldn't find out what each model names were. I googled for long time and solved with creating an array of an object like {model: -- , counter: -- }. I would like to try to find simpler and easier approach to do this process.
 
 Also, when I write this Readme, I noticed that I need to write the instructions how to run which I have never really had in my mind before when I work a project on my own. To do this, I added a index.js for Node.js, this was also hard for me.
 
 
 ## For tests
 
-I am not really familier with JavaScript unit testing so far, I did testing manually with checking on my browser with VScode 'Live Server' extention which run the server automatically every time I save the data.
+I am not really familiar with JavaScript unit testing so far, I did testing manually with checking on my browser with VScode 'Live Server' extension which run the server automatically every time I save the data.
 
 
 ## Problem & Improvement
 
-I wrote codes with skills what I have for now but I would like to find out if there are any better/simpler way to inplement to do the same function.
-Also there is quite empty in the page. In short, I will add and implement:
+I wrote codes with skills what I have for now but I would like to find out if there are any better/simpler way to implement to do the same function.
+Also there is quite empty in the page. In short, I will add and improve:
 
 - re-implement functions in better/simpler way
 - The information of each popular bikes
