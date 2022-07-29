@@ -162,12 +162,23 @@ function csv_array(data) {
   //     model.toUppeCase().replaceAll(' ', '-');
   //   };
 
-  const first =
-    counterArray[0].model[0].toUpperCase() + counterArray[0].model.slice(1);
-  const second =
-    counterArray[1].model[0].toUpperCase() + counterArray[1].model.slice(1);
-  const third =
-    counterArray[2].model[0].toUpperCase() + counterArray[2].model.slice(1);
+  const firstName = counterArray[0].model;
+  const secondName = counterArray[1].model;
+  const thirdName = counterArray[2].model;
+
+  console.log(firstName, secondName, thirdName);
+
+  function displayName(model) {
+    let modelName =
+      model[0].toUpperCase() + model.slice(1).replaceAll(' ', '-');
+    return modelName;
+  }
+
+  const first = displayName(firstName);
+  const second = displayName(secondName);
+  const third = displayName(thirdName);
+
+  console.log(first, second, third);
 
   //   console.log(counterArray[0].model);
   //   console.log(counterArray[1].model);
