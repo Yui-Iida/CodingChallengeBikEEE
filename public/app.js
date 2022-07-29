@@ -34,7 +34,8 @@ const output1st = document.getElementById('output_result_1st');
 const output2nd = document.getElementById('output_result_2nd');
 const output3rd = document.getElementById('output_result_3rd');
 
-function csv_data(dataPath) {
+// Get data from CSV to JS
+const csv_data = dataPath => {
   const request = new XMLHttpRequest();
   request.addEventListener('load', event => {
     const response = event.target.responseText;
@@ -42,9 +43,10 @@ function csv_data(dataPath) {
   });
   request.open('GET', dataPath, true);
   request.send();
-}
+};
 
-function csv_array(data) {
+// Prepare JS array of datas
+const csv_array = data => {
   // get csv data to js
   const dataArray = [];
   const dataString = data.split('\n');
@@ -85,20 +87,20 @@ function csv_array(data) {
   //     }
   //   });
 
+  // For getting name of model from array
   const modelArray = [];
 
-  //   dataArray.forEach(function () {
   dataArray.forEach(element => {
     const modelName = element[2];
-    //   console.log(modelName);
     modelArray.push(modelName);
   });
-  //   });
+
+  // Delete the first element("model")
   modelArray.shift();
   console.log('modelArray', modelArray);
 
   const modelArrayNormarize = modelArray.map(model => {
-    return model.toLowerCase().replaceAll('-', ' ');
+    return model.toLowerCase().replaceAll(' ', '-');
   });
 
   console.log(modelArrayNormarize);
@@ -113,10 +115,10 @@ function csv_array(data) {
   let mandaraCounter = 0;
 
   for (model of modelArrayNormarize) {
-    if (model === 'ec 5') ec5Counter++;
+    if (model === 'ec-5') ec5Counter++;
     if (model === 'beryll') beryllCounter++;
-    if (model === 'et 9 evo') et9evoCounter++;
-    if (model === 'dirt drifter 3000') dirtdrifter3000Counter++;
+    if (model === 'et-9-evo') et9evoCounter++;
+    if (model === 'dirt-drifter-3000') dirtdrifter3000Counter++;
     if (model === 'velossi') velossiCounter++;
     if (model === 'mandara') mandaraCounter++;
   }
@@ -131,7 +133,7 @@ function csv_array(data) {
   let counterArray = [];
   counterArray.push(
     {
-      model: 'ec 5',
+      model: 'ec-5',
       counter: ec5Counter,
     },
     {
@@ -139,11 +141,11 @@ function csv_array(data) {
       counter: beryllCounter,
     },
     {
-      model: 'et 9 evo',
+      model: 'et-9-evo',
       counter: et9evoCounter,
     },
     {
-      model: 'dirt drifter 3000',
+      model: 'dirt-drifter-3000',
       counter: dirtdrifter3000Counter,
     },
     {
@@ -158,21 +160,16 @@ function csv_array(data) {
 
   counterArray.sort((a, b) => b.counter - a.counter);
 
-  //   const outputModel = model => {
-  //     model.toUppeCase().replaceAll(' ', '-');
-  //   };
-
   const firstName = counterArray[0].model;
   const secondName = counterArray[1].model;
   const thirdName = counterArray[2].model;
 
   console.log(firstName, secondName, thirdName);
 
-  function displayName(model) {
-    let modelName =
-      model[0].toUpperCase() + model.slice(1).replaceAll(' ', '-');
+  const displayName = model => {
+    let modelName = model[0].toUpperCase() + model.slice(1);
     return modelName;
-  }
+  };
 
   const first = displayName(firstName);
   const second = displayName(secondName);
@@ -186,33 +183,9 @@ function csv_array(data) {
 
   //   outputElement.innerHTML = `<p class="result">${first} </p></br><p class="result">${second}</p></br><p class="result">${third}</p>`;
 
-  output1st.innerHTML = `<p class="result">${first}</p> <img src="img/${first}.jpg" class="result-pic">`;
-  output2nd.innerHTML = `<p class="result">${second}</p> <img src="img/${second}.jpg" class="result-pic">`;
-  output3rd.innerHTML = `<p class="result">${third}</p> <img src="img/${third}.jpg" class="result-pic">`;
-
-  //   counterArray.push(
-  //     ec5Counter,
-  //     beryllCounter,
-  //     et9evoCounter,
-  //     dirtdrifter3000Counter,
-  //     velossiCounter,
-  //     mandaraCounter
-  //   );
-
-  //   console.log(counterArray.sort());
-  //   console.log(counterArray.sort().slice(-1)[0]);
-  //   console.log(counterArray.sort().slice(-2)[0]);
-  //   console.log(counterArray.sort().slice(-3)[0]);
-
-  //   let insertElement = '';
-  //   dataArray.forEach(element => {
-  //     insertElement += '<tr>';
-  //     element.forEach(childElement => {
-  //       insertElement += `<td>${childElement}</td>`;
-  //     });
-  //     insertElement += '</tr>';
-  //   });
-  //   output_csv.innerHTML = insertElement;
-}
+  output1st.innerHTML = `<p class="result-model">${first}</p> <img src="img/${first}.jpg" class="result-pic">`;
+  output2nd.innerHTML = `<p class="result-model">${second}</p> <img src="img/${second}.jpg" class="result-pic">`;
+  output3rd.innerHTML = `<p class="result-model">${third}</p> <img src="img/${third}.jpg" class="result-pic">`;
+};
 
 csv_data('data.csv');

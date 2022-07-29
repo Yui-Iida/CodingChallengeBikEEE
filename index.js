@@ -3,6 +3,7 @@ let fs = require('fs');
 
 function getType(_url) {
   let types = {
+    // For data types
     '.html': 'text/html',
     '.css': 'text/css',
     '.js': 'text/javascript',
@@ -35,6 +36,7 @@ let server = http.createServer((req, res) => {
   }
 });
 
+// Set the port
 let port = 8000;
 server.listen(port, () => {
   console.log(`Server listening on ${port}`);
