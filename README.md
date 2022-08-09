@@ -1,8 +1,13 @@
 # Coding Challenge "BikEEE"
 
+![スクリーンショット 2022-08-09 12 14 16](https://user-images.githubusercontent.com/92433326/183624237-1f32b3f5-d262-4769-8b73-abf13d995ea9.jpg)
+
+
+
 ## Tasks
 
 (ref: Tech Trainee Coding Challenge BikEEE.pdf)
+
 For a new online marketplace specialized on pedelec classified ads in the Berlin region called “BikEEE”, bring the next big feature to the marketplace, an overview of the models that are currently offered most often on BikEEE.
 
 1. Develop a small application or service that lists the three pedelec models that are currently most frequently advertised on BikEEE using given CSV.
